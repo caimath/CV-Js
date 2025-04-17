@@ -119,27 +119,26 @@ masquerPourImpression();
 
 // Lazyload et scroll
 function scrollReveal() {
-  const sections = document.querySelectorAll('.scroll-reveal');
-
-  sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top; // Objet avec position élément, on prend position top
-      const windowHeight = window.innerHeight; // Hauteur fenêtre
+  $('.scroll-reveal').each(function () {
+      const sectionTop = $(this).offset().top; // Position verticale(top) par rapport au haut de la page
+      const windowHeight = $(window).height(); // Hauteur de la fenêtre
+      const scrollTop = $(window).scrollTop(); // Position du scroll
 
       /**
-       * On compare position du haut de l'élément avec la hauteur de la fenêtre
-       * Si la position élément < hauteur de la fenêtre - 100 pixels, on ajoute la classe "visible" ppour déclencher l'animation
-       * Sinon, on enlève la classe "visible" pour masquer l'élément car pas besoin de l'afficher car pas dans notre champ de vision
+       * sectiontop = distance entre position verticale de l'élément comparé au haut de la page
+       * windowHeight retourne la hauteur de l'affichage --> fenêtre visible
+       * scrolltop = distance entre le haut de la fenêtre et le haut de la page
+       * Condition permet de vérifier que l'élement est dans la fenêtre visible
+       * Puis condition pour afficher
        */
-      if (sectionTop < windowHeight - 100) {
-          section.classList.add('visible');
+      if (sectionTop < scrollTop + windowHeight - 100) {
+          $(this).addClass('visible');
       } else {
-          section.classList.remove('visible');
+          $(this).removeClass('visible');
       }
   });
 }
 
-// Appeler fonction avec scroll
-window.addEventListener('scroll', scrollReveal);
-
-// Appeler fonction au chargement de la page
-window.addEventListener('load', scrollReveal);
+// Appeler la fonction avec scroll et au chargement
+$(window).on('scroll', scrollReveal);
+$(window).on('load', scrollReveal);
