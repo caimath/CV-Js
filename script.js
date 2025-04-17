@@ -20,13 +20,6 @@ if (body.classList.contains('dark-mode')) {
 }
 });
 
-
-window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    contactSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-});
-
-
 // Effet lightbox pour photo mathias
 const profilePhoto = document.getElementById("photoMathias");
 const lightbox = document.getElementById("lightbox");
@@ -64,7 +57,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#top"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));

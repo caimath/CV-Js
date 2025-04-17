@@ -1,4 +1,4 @@
-/* Style global */
+/* STYLE GLOBAL */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -18,8 +18,8 @@ a:hover {
 }
 
 
-/* HEADER STYLE */
 
+/* STYLE DU HEADER */
 header {
     background-color: #333;
     color: #fff;
@@ -52,7 +52,7 @@ header .profile-text p {
     font-size: 1rem;
 }
 
-/* HEADER STYLE PRACTICLES JS */
+/* HEADER STYLE PRACTICLES JS, PARTICULES QUI BOUGENT */
 header {
     position: relative;
     overflow: hidden;
@@ -78,14 +78,14 @@ header {
 
 
 
-/* BODY STYLE */
-
+/* BODY MAIN */
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Style des sections */
 section {
     margin-bottom: 40px;
     padding: 20px;
@@ -101,6 +101,7 @@ section h2 {
     color: #555;
 }
 
+/* Style des skills et expériences */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -126,6 +127,7 @@ ul li {
     margin-bottom: 5px;
 }
 
+/* STYLE DU FOOTER */
 footer {
     background-color: #333;
     color: #fff;
@@ -134,7 +136,10 @@ footer {
     width: 100%;
 }
 
-/* Ancre qui ramène en haut de la page */
+/* STYLE FONCTIONNALITÉS JS */
+
+/* STYLE ancre */
+/* Ancre ramène en haut de la page */
 #back-to-top {
     position: fixed; 
     display: none; /* Masqué, apparaît grâce à JS */
@@ -145,7 +150,7 @@ footer {
     padding: 10px; 
     border-radius: 50%; 
     cursor: pointer; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
     transition: background-color 0.3s; /* Transition pour le changement de couleur */
     text-align: center; 
     text-decoration: none; 
@@ -162,7 +167,7 @@ html {
     scroll-behavior: smooth;
 }
 
-
+/* DARK MODE */
 /* Bouton jour/nuit */
 .mode-toggle {
     position: absolute;
@@ -183,7 +188,6 @@ html {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Ton style dark-mode actuel */
 body.dark-mode {
     background-color: #121212;
     color: #fff;
@@ -217,7 +221,7 @@ body.dark-mode .mode-toggle:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Lightbox photo mathias */
+/* LIGHTBOX photo mathias Header*/
 .lightbox {
     position: fixed;
     top: 0;
@@ -263,6 +267,26 @@ body.dark-mode .mode-toggle:hover {
     }
 }
 
+/* RESPONSIVE IMPRIMANTE" */
+@media print {
+
+
+    /* Masquer inutiles à l'impression */
+    button, #Copyright{
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    body {
+        line-height: normal;
+    }
+}
+
+
+/* RESPONSIVE TEL et TABLETTE */
 /* Responsive image */
 @media (max-width: 600px) {
     .lightbox img {
@@ -273,9 +297,6 @@ body.dark-mode .mode-toggle:hover {
 }
 
 
-
-
-
 @media (max-width: 768px) {
     header .profile {
         flex-direction: column;
@@ -284,10 +305,5 @@ body.dark-mode .mode-toggle:hover {
 
     header .profile img {
         margin-bottom: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
     }
 }
