@@ -44,6 +44,13 @@ profilePhoto.addEventListener("click", () => {
 });
 
 
+// Ferme la lightbox en cliquant en dehors de l'image
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+      lightbox.style.display = "none";
+  }
+});
+
 
 // Ferme avec la touche Échap
 document.addEventListener("keydown", (e) => {
