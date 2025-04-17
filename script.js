@@ -67,6 +67,55 @@ document.querySelectorAll('a[href^="#top"]').forEach(anchor => {
   });
 });
 
+// Fonction pour masquer le titre, la date et le nom du fichier lors de l'impression
+function masquerPourImpression() {
+  // Sauvegarder le titre original
+  const titreOriginal = document.title;
+
+  // Changer le titre avant l'impression
+  window.addEventListener('beforeprint', function() {
+      document.title = ''; // Masquer le titre
+
+      // Masquer date et nom du fichier
+      const style = document.createElement('style');
+      style.appendChild(document.createTextNode('@page { size: auto; margin: 0; }'));
+      document.head.appendChild(style);
+
+      // Enlever mode sombre si mode sombre présent
+      const body = document.body;
+      if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode'); // Retirer le mode sombre pour l'impression
+      }
+
+      // Enlever les particules de particles.js
+      const particlesContainer = document.getElementById('particles-js');
+      if (particlesContainer) {
+          particlesContainer.style.display = 'none'; // Masquer les particules
+      }
+
+  });
+
+  // Restaurer le titre après l'impression
+  window.addEventListener('afterprint', function() {
+      document.title = titreOriginal; // Restaurer le titre original
+
+      // Supprimer le style ajouté
+      const style = document.querySelector('style[media="print"]');
+      if (style) {
+          style.parentNode.removeChild(style);
+      }
+
+      // Restaurer le mode sombre si supprimer
+      if (body.classList.contains('dark-mode') === false) {
+          body.classList.add('dark-mode'); // Réactiver le mode sombre
+      }
+
+  });
+}
+
+// Appel fonction 
+masquerPourImpression();
+
 // PraticlesJS, particule en mouvement dans le header
 particlesJS("particles-js", {
     "particles": {
