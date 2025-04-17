@@ -257,6 +257,19 @@ body.dark-mode .mode-toggle:hover {
     transform: scale(1.2); /* Zoom plus fort */
 }
 
+/* Lazyload et scroll */
+.scroll-reveal {
+    opacity: 0; /* Invisible */
+    transform: translateY(20px); /* Décalage bas de 20px */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition opacité */
+}
+
+.scroll-reveal.visible {
+    opacity: 1; /* Visible car 1 */
+    transform: translateY(0); /* Retourne position de base */
+}
+
+
 /* Animation zoom */
 @keyframes zoomIn {
     from {

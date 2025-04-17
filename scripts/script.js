@@ -114,4 +114,32 @@ function masquerPourImpression() {
 }
 
 // Appel fonction pour masquer impression
-masquerPourImpression(); 
+masquerPourImpression();
+
+
+// Lazyload et scroll
+function scrollReveal() {
+  const sections = document.querySelectorAll('.scroll-reveal');
+
+  sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top; // Objet avec position élément, on prend position top
+      const windowHeight = window.innerHeight; // Hauteur fenêtre
+
+      /**
+       * On compare position du haut de l'élément avec la hauteur de la fenêtre
+       * Si la position élément < hauteur de la fenêtre - 100 pixels, on ajoute la classe "visible" ppour déclencher l'animation
+       * Sinon, on enlève la classe "visible" pour masquer l'élément car pas besoin de l'afficher car pas dans notre champ de vision
+       */
+      if (sectionTop < windowHeight - 100) {
+          section.classList.add('visible');
+      } else {
+          section.classList.remove('visible');
+      }
+  });
+}
+
+// Appeler fonction avec scroll
+window.addEventListener('scroll', scrollReveal);
+
+// Appeler fonction au chargement de la page
+window.addEventListener('load', scrollReveal);
