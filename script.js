@@ -113,7 +113,7 @@ function masquerPourImpression() {
   });
 }
 
-// Appel fonction 
+// Appel fonction pour masquer impression
 masquerPourImpression();
 
 // PraticlesJS, particule en mouvement dans le header
