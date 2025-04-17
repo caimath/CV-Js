@@ -101,7 +101,7 @@ section h2 {
     color: #555;
 }
 
-.skills, .experience, .formation, .interest {
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -133,6 +133,35 @@ footer {
     padding: 10px;
     width: 100%;
 }
+
+/* Ancre qui ramène en haut de la page */
+#back-to-top {
+    position: fixed; 
+    display: none; /* Masqué, apparaît grâce à JS */
+    bottom: 20px; 
+    right: 0.25em; 
+    background-color: #6c757d; 
+    color: #ffffff; 
+    padding: 10px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur */
+    text-align: center; 
+    text-decoration: none; 
+    font-size: 24px; 
+    line-height: 24px; 
+}
+
+
+#back-to-top:hover {
+    background-color: #495057; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Bouton jour/nuit */
 .mode-toggle {
@@ -188,13 +217,7 @@ body.dark-mode .mode-toggle:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-
-
-
-
-
 /* Lightbox photo mathias */
-/* Lightbox */
 .lightbox {
     position: fixed;
     top: 0;

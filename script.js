@@ -21,12 +21,6 @@ if (body.classList.contains('dark-mode')) {
 });
 
 
-// Effet parallaxe
-const contactSection = document.getElementById("contact");
-contactSection.style.backgroundAttachment = "fixed";
-contactSection.style.backgroundPosition = "center";
-contactSection.style.backgroundSize = "cover";
-
 window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
     contactSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
@@ -59,7 +53,28 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-// PraticlesJS
+// Ancre qui ramène au top
+const backToTopButton = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+  });
+});
+
+// PraticlesJS, particule en mouvement dans le header
 particlesJS("particles-js", {
     "particles": {
       "number": { "value": 60, "density": { "enable": true, "value_area": 800 }},
