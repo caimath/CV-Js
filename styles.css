@@ -17,6 +17,10 @@ a:hover {
     color: #999;
 }
 
+#LinKtree {
+    text-decoration: underline; 
+}
+
 
 
 /* STYLE DU HEADER */
