@@ -1,0 +1,31 @@
+
+# Fonctionnalités Javascript
+
+## Dark mode
+
+* Réalise un mode jour/nuit en appuyant sur un bouton
+* Garde en mémoire avec localStorage le choix de l'utilisateur, si il actualise le mode reste le même
+
+## LightBox photo mathias
+
+* Lightbox sur une photo de moi dans mon header
+* Se ferme quand on clique sur "esc" ou si on clique hors de la photo
+* Floute l'arrière plan
+
+## Lazyload & scroll (jQuery)
+* Fait apparaître les éléments : contact, compétences, expériences professionnelles, formation et centres d'intérêt avec un lazyload
+
+## Plug-in/ librairie "particleJS"
+
+* Met des particules en mouvements dans mon header
+* Si on bouge la curseur dans le header, les particules se lient au curseur
+
+## Impression
+
+* Retire le mode sombre
+* Retire le titre, le nom et l'horodatage de la page pour l'impression
+* Retire le lazyload pour que les éléments soient visibles en ajoutant la classe "visible"
+
+## Ancre
+
+* Fait apparaître une ancre en bas à droite de l'écran quand on a scrollé plus de 200 pixels

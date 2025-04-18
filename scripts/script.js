@@ -105,7 +105,7 @@ function masquerPourImpression() {
   window.addEventListener('afterprint', function() {
       document.title = titreOriginal; // Restaurer le titre original
 
-      // Supprimer le style ajouté
+      // Supprime le style qui retire l'horodage et nom du fichier
       const style = document.querySelector('style[media="print"]');
       if (style) {
           style.parentNode.removeChild(style);
