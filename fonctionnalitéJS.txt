@@ -1,31 +1,31 @@
-
 # Fonctionnalités Javascript
 
 ## Dark mode
 
-* Réalise un mode jour/nuit en appuyant sur un bouton
-* Garde en mémoire avec localStorage le choix de l'utilisateur, si il actualise le mode reste le même
+* Réalise un mode jour/nuit en appuyant sur un bouton.
+* Garde en mémoire avec localStorage le choix de l'utilisateur. Si l'utilisateur actualise, le mode reste le même.
 
-## LightBox photo mathias
+## LightBox photo Mathias
 
-* Lightbox sur une photo de moi dans mon header
-* Se ferme quand on clique sur "esc" ou si on clique hors de la photo
-* Floute l'arrière plan
+* Lightbox sur une photo de moi dans mon header.
+* Se ferme quand on clique sur "Échap" ou si on clique hors de la photo.
+* Floute l'arrière-plan.
 
 ## Lazyload & scroll (jQuery)
-* Fait apparaître les éléments : contact, compétences, expériences professionnelles, formation et centres d'intérêt avec un lazyload
 
-## Plug-in/ librairie "particleJS"
+* Fait apparaître les éléments : profil, contact, compétences, expériences professionnelles, formations et centres d'intérêt avec un lazyload.
 
-* Met des particules en mouvements dans mon header
-* Si on bouge la curseur dans le header, les particules se lient au curseur
-* Si une particule se lie à notre curseur et qu'on clique, plein d'autres particules apparaîssent
+## Plug-in/librairie "particleJS"
+
+* Met des particules en mouvement dans mon header.
+* Si on bouge le curseur dans le header, les particules se lient au curseur.
+* Si une particule se lie à notre curseur et qu'on clique, plein d'autres particules apparaissent.
 
 ## Impression
 
-* Retire le mode sombre
-* Retire le titre, le nom et l'horodatage de la page pour l'impression
+* Retire le mode sombre.
+* Retire le titre, le nom et l'horodatage de la page pour l'impression.
 
 ## Ancre
 
-* Fait apparaître une ancre en bas à droite de l'écran quand on a scrollé plus de 200 pixels
+* Fait apparaître une ancre en bas à droite de l'écran quand on a scrollé plus de 200 pixels, qui fait revenir au top de la page.
