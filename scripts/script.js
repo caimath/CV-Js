@@ -87,12 +87,6 @@ function masquerPourImpression() {
           body.classList.remove('dark-mode'); // Retirer le mode sombre pour l'impression
       }
 
-      // Séléctionner les éléments masqués ".scroll-reveal" pour les afficher
-      const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-      scrollRevealElements.forEach(element => {
-          element.classList.add('visible'); // Classe visible
-      });
-
       // Enlever les particules de particles.js
       const particlesContainer = document.getElementById('particles-js');
       if (particlesContainer) {
