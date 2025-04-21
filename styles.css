@@ -132,13 +132,13 @@ ul li {
 }
 
 /* Optimisation espace*/
-#formation-centresInteret {
+.colonnes-section {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-#formation-centresInteret section{
+.colonnes-section section{
     flex: 1 1 45%;
 }
 
@@ -340,6 +340,10 @@ body.dark-mode .mode-toggle:hover {
         padding-right: 15px;
     }
 
+    #aProposMoi{
+        padding-right: 15px;
+    }
+
 
     section {
         margin-bottom: 0px;
@@ -377,7 +381,7 @@ body.dark-mode .mode-toggle:hover {
         margin-bottom: 20px;
     }
 
-    #formation-centresInteret {
+    .colonnes-section {
         display: flex;
         gap: 0px;
         flex-wrap: wrap;
