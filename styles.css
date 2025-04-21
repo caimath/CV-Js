@@ -313,7 +313,8 @@ body.dark-mode .mode-toggle:hover {
     /* Réduire la taille du header */
     .profile {
         gap: 0px;
-        padding: 0rem;
+        padding: 5px;
+        margin-bottom: 0px;
     }
 
 
@@ -321,6 +322,7 @@ body.dark-mode .mode-toggle:hover {
     header {
         background-color: #fff;
         color: #000; /* Couleur noir, sinon ne s'affiche pas */
+        padding: 0px;
     }
 
     .print-row {
