@@ -19,12 +19,12 @@
 
 * Met des particules en mouvements dans mon header
 * Si on bouge la curseur dans le header, les particules se lient au curseur
+* Si une particule se lie à notre curseur et qu'on clique, plein d'autres particules apparaîssent
 
 ## Impression
 
 * Retire le mode sombre
 * Retire le titre, le nom et l'horodatage de la page pour l'impression
-* Retire le lazyload pour que les éléments soient visibles en ajoutant la classe "visible"
 
 ## Ancre
 
