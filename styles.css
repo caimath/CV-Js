@@ -325,6 +325,10 @@ body.dark-mode .mode-toggle:hover {
         padding: 0px;
     }
 
+    main {
+        background-color: #fff;
+    }
+
     .print-row {
         display: flex;
         flex-direction: row;
