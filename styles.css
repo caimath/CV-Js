@@ -132,15 +132,14 @@ ul li {
 }
 
 /* Optimisation espace*/
-.formation-centresInteret {
+#formation-centresInteret {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.formation-centresInteret section{
+#formation-centresInteret section{
     flex: 1 1 45%;
-
 }
 
 
@@ -331,6 +330,23 @@ body.dark-mode .mode-toggle:hover {
         align-items: center;
     }
 
+    #formations{
+        padding-right: 15px;
+    }
+
+
+    section {
+        margin-bottom: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    .scroll-reveal {
+        opacity: 1; /* Visible */
+        transform: translateY(0); /* Retourne position de base */
+    }
+
 }
 
 
@@ -344,7 +360,7 @@ body.dark-mode .mode-toggle:hover {
     }
 }
 
-
+/* Responsive telephone */
 @media (max-width: 768px) {
     header .profile {
         flex-direction: column;
@@ -353,5 +369,11 @@ body.dark-mode .mode-toggle:hover {
 
     header .profile img {
         margin-bottom: 20px;
+    }
+
+    #formation-centresInteret {
+        display: flex;
+        gap: 0px;
+        flex-wrap: wrap;
     }
 }
