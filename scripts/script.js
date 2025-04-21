@@ -57,15 +57,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-document.querySelectorAll('a[href^="#top"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-  });
-});
 
 // Fonction pour masquer le titre, la date et le nom du fichier lors de l'impression
 function masquerPourImpression() {
