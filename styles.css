@@ -131,6 +131,18 @@ ul li {
     margin-bottom: 5px;
 }
 
+/* Optimisation espace*/
+.formation-centresInteret {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.formation-centresInteret section{
+    flex: 1 1 45%;
+
+}
+
 
 /* STYLE DU FOOTER */
 footer {
