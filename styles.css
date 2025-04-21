@@ -336,6 +336,10 @@ body.dark-mode .mode-toggle:hover {
         align-items: center;
     }
 
+    #experiences {
+        padding-top: 15px;
+    }
+
     #formations{
         padding-right: 15px;
     }
