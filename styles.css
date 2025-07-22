@@ -301,6 +301,12 @@ body.dark-mode .mode-toggle:hover {
 @media print {
 
 
+    section h2 {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
     /* Masquer bouton nuit/jour et copyright */
     button, #Copyright{
         display: none;
@@ -334,6 +340,15 @@ body.dark-mode .mode-toggle:hover {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .skills {
+        gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    .skill-category {
+        margin-bottom: 0px;
     }
 
     #experiences {
